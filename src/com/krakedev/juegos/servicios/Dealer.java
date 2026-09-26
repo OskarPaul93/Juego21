@@ -9,9 +9,7 @@ public class Dealer {
 
 	
 	public Dealer() {
-
 		naipe = new ArrayList<Carta>();
-
 		generarNaipe();
 	}
 	

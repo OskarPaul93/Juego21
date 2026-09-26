@@ -10,7 +10,9 @@ public class Juego21 {
 	private Dealer dealer;
 	
 	
-	
+	public ArrayList<Jugador> getJugadores() {
+	    return jugadores;
+	}
 	
 	//constructor
 	public Juego21() {
@@ -119,6 +121,18 @@ public class Juego21 {
 
 	    return ganadores;
 	}
+	
+	public void reiniciar() {
+
+	    for (Jugador jugador : jugadores) {
+
+	        jugador.getCartas().clear();
+
+	        jugador.setPuntajeCartas(0);
+	    }
+	}
+	
+	
 	
 	
 

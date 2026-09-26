@@ -38,6 +38,8 @@ public class TestJuego21 {
      // Ejecutar el juego
         ArrayList<Jugador> ganadores = juego.jugar();
         
+        
+        //Pruebas anteriores
 
         // Mostrar cartas de los jugadores
         System.out.println("===== CARTAS DE LOS JUGADORES =====");
@@ -77,6 +79,93 @@ public class TestJuego21 {
 
         for (Jugador ganador : ganadores) {
             System.out.println("Ganador: " + ganador.getNickname());
+        }
+        
+        juego.reiniciar();
+        
+        
+        //PRIMERA PRUEBA: EJECUTAR jugar()
+        juego.inicializar();
+        ArrayList<Jugador> ganadores1 = juego.jugar();
+        
+        System.out.println("===== PRIMERA PRUEBA =====");
+
+        System.out.println("===== CARTAS DE LOS JUGADORES =====");
+
+        jugador1.imprimir();
+
+        System.out.println("-------------------------");
+
+        jugador2.imprimir();
+
+        System.out.println("-------------------------");
+
+        jugador3.imprimir();
+
+        System.out.println("===== PUNTAJE =====");
+
+        System.out.println(jugador1.getNickname() + ": "
+                + jugador1.getPuntajeCartas());
+
+        System.out.println(jugador2.getNickname() + ": "
+                + jugador2.getPuntajeCartas());
+
+        System.out.println(jugador3.getNickname() + ": "
+                + jugador3.getPuntajeCartas());
+
+        System.out.println("===== GANADORES =====");
+
+        for (Jugador ganador : ganadores1) {
+
+            System.out.println("Ganador: " + ganador.getNickname());
+        }
+        
+
+        juego.reiniciar();
+        
+     // SEGUNDA PRUEBA: 10 ITERACIONES
+
+        
+
+        System.out.println("SEGUNDA PRUEBA 10 INTERACCIONES");
+        for (int i = 0; i < 10; i++) {
+
+            System.out.println("=========================");
+            System.out.println("JUEGO " + (i + 1));
+            System.out.println("=========================");
+
+            ArrayList<Jugador> ganadores2 = juego.jugar();
+
+            System.out.println("===== CARTAS DE LOS JUGADORES =====");
+
+            for (Jugador jugador : juego.getJugadores()) {
+
+                jugador.imprimir();
+
+                System.out.println("-------------------------");
+            }
+
+            System.out.println("===== PUNTAJE =====");
+
+            for (Jugador jugador : juego.getJugadores()) {
+
+                System.out.println(jugador.getNickname() + ": "
+                        + jugador.getPuntajeCartas());
+            }
+
+            if (ganadores2.size() > 0) {
+
+                System.out.println("===== GANADORES =====");
+
+                for (Jugador ganador : ganadores2) {
+
+                    System.out.println("Ganador: " + ganador.getNickname());
+                }
+
+                break;
+            }
+
+            juego.reiniciar();
         }
         
         

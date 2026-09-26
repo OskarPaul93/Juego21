@@ -88,6 +88,19 @@ public class Juego21 {
 	    return dealer;
 	}
 	
+	public ArrayList<Jugador> validarGanador() {
+
+	    ArrayList<Jugador> ganadores = new ArrayList<Jugador>();
+
+	    for (Jugador jugador : jugadores) {
+	        if (jugador.getPuntajeCartas() == 21) {
+	            ganadores.add(jugador);
+	        }
+	    }
+
+	    return ganadores;
+	}
+	
 	
 
 }

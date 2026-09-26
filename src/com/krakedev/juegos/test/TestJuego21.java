@@ -1,5 +1,7 @@
 package com.krakedev.juegos.test;
 
+import java.util.ArrayList;
+
 import com.krakedev.juegos.entidades.Jugador;
 import com.krakedev.juegos.servicios.Juego21;
 
@@ -29,6 +31,7 @@ public class TestJuego21 {
         juego.inicializar();
 
         // Repartir una carta a cada jugador
+        juego.repartirRonda();
         juego.repartirRonda();
         juego.repartirRonda();
         
@@ -65,6 +68,14 @@ public class TestJuego21 {
 
         System.out.println(jugador3.getNickname() + ": " 
                 + jugador3.getPuntajeCartas());
+        
+        ArrayList<Jugador> ganadores = juego.validarGanador();
+
+        System.out.println("===== GANADORES =====");
+
+        for (Jugador ganador : ganadores) {
+            System.out.println("Ganador: " + ganador.getNickname());
+        }
         
         
     }

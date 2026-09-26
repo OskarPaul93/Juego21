@@ -31,9 +31,12 @@ public class TestJuego21 {
         juego.inicializar();
 
         // Repartir una carta a cada jugador
-        juego.repartirRonda();
-        juego.repartirRonda();
-        juego.repartirRonda();
+//        juego.repartirRonda();
+//        juego.repartirRonda();
+//        juego.repartirRonda();
+        
+     // Ejecutar el juego
+        ArrayList<Jugador> ganadores = juego.jugar();
         
 
         // Mostrar cartas de los jugadores
@@ -69,7 +72,6 @@ public class TestJuego21 {
         System.out.println(jugador3.getNickname() + ": " 
                 + jugador3.getPuntajeCartas());
         
-        ArrayList<Jugador> ganadores = juego.validarGanador();
 
         System.out.println("===== GANADORES =====");
 

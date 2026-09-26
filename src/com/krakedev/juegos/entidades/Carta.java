@@ -25,9 +25,8 @@ public class Carta {
 	}
 	
 	public void imprimir() {
-		System.out.println("Valor: " + valor);
-		System.out.println("Valor juego: " + valorJuego);
-		System.out.println("Palo: " + palo);
+		System.out.println( valor + "-" + palo + ", " + "Valor juego= " + valorJuego);
+
 	}
 	
 	

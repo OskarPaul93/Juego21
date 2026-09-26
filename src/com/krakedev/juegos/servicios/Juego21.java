@@ -10,9 +10,7 @@ public class Juego21 {
 	private Dealer dealer;
 	
 	
-	public Dealer getDealer() {
-	    return dealer;
-	}
+	
 	
 	//constructor
 	public Juego21() {
@@ -66,6 +64,28 @@ public class Juego21 {
 
 	        repartirCarta(jugador);
 	    }
+	    
+	    calcularTotal();
+	}
+	
+	
+	public void calcularTotal() {
+
+	    for (Jugador jugador : jugadores) {
+
+	        int total = 0;
+
+	        for (Carta carta : jugador.getCartas()) {
+
+	            total = total + carta.getValorJuego();
+	        }
+
+	        jugador.setPuntajeCartas(total);
+	    }
+	}
+	
+	public Dealer getDealer() {
+	    return dealer;
 	}
 	
 	

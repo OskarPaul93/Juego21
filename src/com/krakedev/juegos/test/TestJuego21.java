@@ -30,6 +30,8 @@ public class TestJuego21 {
 
         // Repartir una carta a cada jugador
         juego.repartirRonda();
+        juego.repartirRonda();
+        
 
         // Mostrar cartas de los jugadores
         System.out.println("===== CARTAS DE LOS JUGADORES =====");
@@ -44,13 +46,28 @@ public class TestJuego21 {
 
         jugador3.imprimir();
 
-        // Mostrar el naipe restante del Dealer
-        System.out.println("=========================");
-        System.out.println("NAIPE RESTANTE DEL DEALER");
-        System.out.println("=========================");
+//        // Mostrar el naipe restante del Dealer
+//        System.out.println("=========================");
+//        System.out.println("NAIPE RESTANTE DEL DEALER");
+//        System.out.println("=========================");
 
-        juego.getDealer().imprimirNaipe();
+        //juego.getDealer().imprimirNaipe();
 
         System.out.println("Cartas restantes: " + juego.getDealer().getNaipe().size());
+        
+        System.out.println("===== PUNTAJE DE LOS JUGADORES =====");
+
+        System.out.println(jugador1.getNickname() + ": " 
+                + jugador1.getPuntajeCartas());
+
+        System.out.println(jugador2.getNickname() + ": " 
+                + jugador2.getPuntajeCartas());
+
+        System.out.println(jugador3.getNickname() + ": " 
+                + jugador3.getPuntajeCartas());
+        
+        
     }
+    
+    
 }
